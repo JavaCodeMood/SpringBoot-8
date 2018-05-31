@@ -1,0 +1,22 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>redPackage-model</artifactId>
+	<packaging>jar</packaging>
+	<!-- 父工程 -->
+	<parent>
+		<groupId>com.kakaRedPackage</groupId>
+		<artifactId>redPackage</artifactId>
+		<version>1.0</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+	<!-- dao -->
+	<!-- <dependencies>
+		<dependency>
+			<artifactId>redPackage-dao</artifactId>
+			<groupId>com.kakaRedPackage</groupId>
+			<version>1.0</version>
+		</dependency>
+	</dependencies> -->
+</project>

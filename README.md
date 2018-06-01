@@ -1,4 +1,4 @@
-# :cn: `Spring Boot 多modules工程实战开发` :cn:=== <br>
+# :cn: `Spring Boot 多modules工程实战开发` :cn: <br>
 
 ## 1 : * 重构`SpringMvc`项目，取消复杂的配置文件，改为`SpringBoot` <br>
 ## 2 : * `SpringBoot` 多模块工程配置清单 <br>

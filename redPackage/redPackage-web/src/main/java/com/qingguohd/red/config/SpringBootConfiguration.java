@@ -23,7 +23,6 @@ public class SpringBootConfiguration extends WebMvcConfigurerAdapter {
 		registry.addInterceptor(new TimeInterceptor());
 	}
 
-	@SuppressWarnings("deprecation")
 	@Bean
 	public HttpMessageConverters fastJsonHttpMessageConverters() {
 		FastJsonHttpMessageConverter fastJsonHttpMessageConverter = new FastJsonHttpMessageConverter();
@@ -31,7 +30,7 @@ public class SpringBootConfiguration extends WebMvcConfigurerAdapter {
 		fastJsonConfig.setSerializerFeatures(SerializerFeature.PrettyFormat);
 		fastJsonHttpMessageConverter.setFastJsonConfig(fastJsonConfig);
 		HttpMessageConverter<?> converter = fastJsonHttpMessageConverter;
-		logger.info("======= SpringBootConfiguration -------> " + fastJsonHttpMessageConverter.getDateFormat());
+		logger.info("web SpringBootConfiguration开始运行...... -------> " + fastJsonHttpMessageConverter);
 		return new HttpMessageConverters(converter);
 
 	}

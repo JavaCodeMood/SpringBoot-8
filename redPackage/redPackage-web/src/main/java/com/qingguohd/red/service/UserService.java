@@ -31,7 +31,16 @@ public class UserService {
 		
 		List<User> userList = userMapper.getUserList();
 		redis.set(keyList, net.sf.json.JSONArray.fromObject(userList));
+		System.out.println(redis.get("userList"));
+		redis.remove("userList");
 		return userList;
+	}
+	
+	
+	public int insertUser(User user) {
+		int add = userMapper.insert(user);
+		return add;
+		
 	}
 
 

@@ -3,6 +3,7 @@ package com.qingguohd.red.dao;
 import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.qingguohd.red.model.User;
 
@@ -12,6 +13,7 @@ public interface UserMapper {
 
 	int deleteByPrimaryKey(Long id);
 
+	@Transactional
 	int insert(User record);
 
 	int insertSelective(User record);
@@ -23,5 +25,6 @@ public interface UserMapper {
 	int updateByPrimaryKey(User record);
 	
 	//
+	@Transactional
 	List<User> getUserList();
 }

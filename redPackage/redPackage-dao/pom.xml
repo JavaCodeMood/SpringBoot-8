@@ -19,11 +19,17 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-redis</artifactId>
 		</dependency>
+		<!-- Springboot 事务 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-redis</artifactId>
 			<version>1.3.5.RELEASE</version>
 		</dependency>
+		<!-- SpringBoot 缓存 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-cache</artifactId>
@@ -80,7 +86,6 @@
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
-		<!-- 使用时讨论保留druid还是dbcp连接池 -add by yugh 2018-05-31 -->
 		<dependency>
 			<groupId>commons-dbcp</groupId>
 			<artifactId>commons-dbcp</artifactId>
@@ -119,7 +124,7 @@
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-pool2</artifactId>
 		</dependency>
-		<dependency>
+		<!-- <dependency>
 			<groupId>com.alipay.java.sdk</groupId>
 			<artifactId>alipay-sdk</artifactId>
 			<version>1.0.0</version>
@@ -128,7 +133,7 @@
 			<groupId>com.alipay</groupId>
 			<artifactId>alipay-sdk-java</artifactId>
 			<version>20170615110434</version>
-		</dependency>
+		</dependency> -->
 		<dependency>
 			<groupId>com.aliyun</groupId>
 			<artifactId>aliyun-java-sdk-core</artifactId>

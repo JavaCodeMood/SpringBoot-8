@@ -5,11 +5,13 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.ListOperations;
-import org.springframework.data.redis.core.SetOperations;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.SetOperations;
 import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.data.redis.core.ZSetOperations;
 import org.springframework.stereotype.Component;
@@ -25,9 +27,17 @@ import org.springframework.stereotype.Component;
 @SuppressWarnings({"rawtypes","unchecked"})
 public class RedisUtils {
 	
+	private static final Logger logger = LoggerFactory.getLogger(RedisUtils.class);
+	
 	@Autowired
 	private RedisTemplate redisTemplate;
 
+	
+	static {
+		logger.info("redis 开始使用....... ");
+	}
+	
+	
 	/**
 	 * 写入缓存
 	 * @param key

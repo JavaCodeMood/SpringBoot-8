@@ -24,7 +24,7 @@ public class TimeFilter implements Filter {
 
 	@Override
 	public void init(FilterConfig filterConfig) throws ServletException {
-		logger.info("时间Filter初始化..........");
+		logger.info("web 时间Filter初始化..........");
 	}
 
 	@Override
@@ -34,7 +34,7 @@ public class TimeFilter implements Filter {
 
 	@Override
 	public void destroy() {
-		logger.info("时间Filter销毁..........");
+		logger.info("web 时间Filter销毁..........");
 	}
 
 }

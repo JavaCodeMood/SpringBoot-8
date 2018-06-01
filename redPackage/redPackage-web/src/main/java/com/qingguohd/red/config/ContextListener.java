@@ -18,12 +18,12 @@ public class ContextListener implements ServletContextListener {
 
     @Override
     public void contextInitialized(ServletContextEvent sce) {
-    	logger.info("监听器初始化........");
+    	logger.info("web 监听器初始化........");
     }
 
     @Override
     public void contextDestroyed(ServletContextEvent sce) {
-    	logger.info("监听器销毁........");
+    	logger.info("web 监听器销毁........");
     }
 
 }

@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Implementation-Title: redPackage-mq-consumer
 Implementation-Version: 1.0
-Built-By: yugenhai
+Built-By: yuzhilin
 Implementation-Vendor-Id: com.kakaRedPackage
-Build-Jdk: 1.8.0_162
+Build-Jdk: 1.8.0_171
 Implementation-URL: http://projects.spring.io/spring-boot/redPackage/r
  edPackage-mq-consumer/
 Created-By: Maven Integration for Eclipse

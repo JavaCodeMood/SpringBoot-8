@@ -17,12 +17,10 @@ import com.qingguohd.red.config.ContextListener;
 import com.qingguohd.red.config.TimeFilter;
 
 /**
- * ###### WEB接口入口处,打包目前是以WAR形式
- * ###### 启动方式暂时放tomcat里,可以用命令指定,后期用命令+自定义端口和开发模式加载
  * @author: YuGenHai
  * @name: Application.java
  * @creation: 2018年5月29日 下午5:37:09
- * @notes:  ###########################  -------> 请阅读注释后操作
+ * @notes:  ###########################  -------> 入口
  */
 @EnableCaching
 @SpringBootApplication

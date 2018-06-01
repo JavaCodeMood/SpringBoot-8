@@ -1,5 +1,7 @@
 package com.qingguohd.red.config;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
@@ -19,6 +21,9 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 @Configuration
 @EnableCaching
 public class RedisCacheConfig {
+	
+	private static final Logger logger = LoggerFactory.getLogger(RedisCacheConfig.class);
+	
 	@Bean
 	public CacheManager cacheManager(RedisTemplate<?, ?> redisTemplate) {
 		CacheManager cacheManager = new RedisCacheManager(redisTemplate);
@@ -32,6 +37,7 @@ public class RedisCacheConfig {
 		RedisSerializer<String> redisSerializer = new StringRedisSerializer();
 		redisTemplate.setKeySerializer(redisSerializer);
 		redisTemplate.setHashKeySerializer(redisSerializer);
+		logger.info("redis 缓存运行..... " + redisTemplate.getStringSerializer());
 		return redisTemplate;
 	}
 }

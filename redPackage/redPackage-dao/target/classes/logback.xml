@@ -3,7 +3,7 @@
 	<!-- add by yugh 2018-05-25  ##### 日志记录,会在相对路径下生产一个info 和 error 日志 -->
 	<!-- info error 文件来源于 logger.info 和 logger.error 的输出 -->
 	<!--定义日志文件的存储地址 勿在 LogBack 的配置中使用相对路径 -->
-	<property name="LOG_HOME" value="D:/testLog" />
+	<property name="LOG_HOME" value="D:/QingGuoWork/qingguo-workspace_newRedPackage/kakazhuan-20180525-redPackage-SpringBoot/redPackage/Logs" />
 	<!-- 彩色日志 -->
 	<!-- 彩色日志依赖的渲染类 -->
 	<conversionRule conversionWord="clr" converterClass="org.springframework.boot.logging.logback.ColorConverter" />
@@ -31,7 +31,7 @@
 	<appender name="DAYINFO" class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 			<!--日志文件输出的文件名 -->
-			<FileNamePattern>${LOG_HOME}/TestSpringBoot_info.log.%d{yyyy-MM-dd}.log
+			<FileNamePattern>${LOG_HOME}/redPackage.log.%d{yyyy-MM-dd}.log
 			</FileNamePattern>
 			<!--日志文件保留天数 -->
 			<MaxHistory>30</MaxHistory>
@@ -54,7 +54,7 @@
 	<appender name="DAYERROR" class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 			<!--日志文件输出的文件名 -->
-			<FileNamePattern>${LOG_HOME}/TestSpringBoot_error.log.%d{yyyy-MM-dd}.log
+			<FileNamePattern>${LOG_HOME}/redPackage.log.%d{yyyy-MM-dd}.log
 			</FileNamePattern>
 			<!--日志文件保留天数 -->
 			<MaxHistory>30</MaxHistory>

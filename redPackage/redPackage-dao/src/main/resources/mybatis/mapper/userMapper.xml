@@ -25,7 +25,7 @@
     insert into ka_ad_login (id, name, password, 
       ad_id, create_time)
     values (#{id,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
-      #{adId,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP})
+      #{adId,jdbcType=INTEGER},now())
   </insert>
   <insert id="insertSelective" parameterType="com.qingguohd.red.model.User">
     insert into ka_ad_login

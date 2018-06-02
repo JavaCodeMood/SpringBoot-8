@@ -24,7 +24,7 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 
-	@RequestMapping(value = "/add", method = RequestMethod.GET, produces = "application/json;charset=utf-8")
+	@RequestMapping(value = "/add", method = RequestMethod.POST, produces = "application/json;charset=utf-8")
 	public List<User> getUserList(@RequestParam(value = "name", required = false)String name,
 			@RequestParam(value = "pasword", required = false) String pasword, @RequestParam(value = "adid", required = false) Integer adid) {
 		User user = new User();
@@ -36,4 +36,6 @@ public class UserController {
 		return userService.getUserList();
 	}
 
+	
+	
 }

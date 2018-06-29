@@ -28,7 +28,7 @@ public class TimeInterceptor implements HandlerInterceptor {
             throws Exception {
     	logger.info("========postHandle=========");
         Long start = (Long) request.getAttribute("startTime");
-        logger.info("耗时:"+(System.currentTimeMillis() - start)/1000);
+        logger.info("耗时:"+(System.currentTimeMillis() - start));
     }
 
     @Override
@@ -36,7 +36,7 @@ public class TimeInterceptor implements HandlerInterceptor {
             throws Exception {
     	logger.info("========afterCompletion=========");
         Long start = (Long) request.getAttribute("startTime");
-        logger.info("耗时:"+(System.currentTimeMillis() - start)/1000);
+        logger.info("耗时:"+(System.currentTimeMillis() - start));
         if(null != exception) {
         	logger.info(exception.getMessage());
         }

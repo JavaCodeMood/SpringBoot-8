@@ -1,42 +1,10 @@
 package com.qingguohd.red.controller;
 
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
-
-import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
 
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
-
-import com.kakazhuan.common.BaseController;
-import com.kakazhuan.common.Pager;
-import com.kakazhuan.dao.redis.RedisUtil;
-import com.kakazhuan.domain.KaApprenticeEventConfig;
-import com.kakazhuan.domain.KaApprenticeEventRecord;
-import com.kakazhuan.domain.KaMember;
-import com.kakazhuan.domain.KaMemberApprenticeCash;
-import com.kakazhuan.domain.KaMemberApprenticeIssueRecord;
-import com.kakazhuan.domain.KaMemberGoldRecord;
-import com.kakazhuan.domain.KaMemberSubCount;
-import com.kakazhuan.dto.ApprenticeTopNewsDto;
-import com.kakazhuan.dto.KaApprenticeContribuDto;
-import com.kakazhuan.dto.KaApprenticeRewardDto;
-import com.kakazhuan.dto.PrivilegeDto;
-import com.kakazhuan.dto.request.ApprenticeTopNews;
-import com.kakazhuan.front.service.KaApprenticeEventRecordService;
-import com.kakazhuan.front.service.KaMemberService;
-import com.kakazhuan.front.web.vo.json.JSONResponseBody;
-import com.kakazhuan.util.validate.Validator;
-
-import net.sf.json.JSONArray;
 
 /**
  * @author: YuGenHai
@@ -50,14 +18,14 @@ public class KaApprenticesNewController {
 
 	
 	
-	@Resource
-	private KaApprenticeEventRecordService kaApprenticeEventRecordService;// 收徒相关
+	//@Resource
+	//private KaApprenticeEventRecordService kaApprenticeEventRecordService;// 收徒相关
 
-	@Resource
-	private KaMemberService kaMemberService;// 用户注册表
+	//@Resource
+	//private KaMemberService kaMemberService;// 用户注册表
 
-	@Resource
-	private RedisUtil redisUtil;
+	//@Resource
+	//private RedisUtil redisUtil;
 	
 
 	/**
@@ -130,7 +98,7 @@ public class KaApprenticesNewController {
 	 * @param map
 	 * @return
 	 */
-	@SuppressWarnings("unchecked")
+	/** @SuppressWarnings("unchecked")
 	@RequestMapping("apprenticedetailsa")
 	public String apprenticeDetailsA(HttpServletRequest request, ModelMap map) {
 		Long uid = Long.valueOf(request.getParameter("uid"));
@@ -282,7 +250,7 @@ public class KaApprenticesNewController {
 		return "apprentice/inviteapprentice";
 	}
 	
-	
+	**/
 
 	
 	/**
@@ -292,7 +260,7 @@ public class KaApprenticesNewController {
 	 * @param uid
 	 * @return
 	 */
-	private int addApprenticeEventRecord(KaApprenticeEventRecord eventRecord, Long uid) {
+	/** private int addApprenticeEventRecord(KaApprenticeEventRecord eventRecord, Long uid) {
 		eventRecord.setUserAcceptTime(new Date());
 		eventRecord.setUserEndTime(new Date());
 		eventRecord.setState("0");
@@ -302,7 +270,7 @@ public class KaApprenticesNewController {
 		int add = kaApprenticeEventRecordService.addApprenticeEventRecord(eventRecord);
 		return add;
 	}
-	
+	**/
 	
 	
 	/**
@@ -311,7 +279,7 @@ public class KaApprenticesNewController {
 	 * @param uid
 	 * @return
 	 */
-	@ResponseBody
+	/** @ResponseBody
 	@RequestMapping(value = "apprenticestobanner", method = RequestMethod.POST, produces = "application/json;charset=utf-8")
 	public String apprenticesToBanner(@RequestParam(value = "uid") Long uid) {
 		JSONResponseBody json = new JSONResponseBody();
@@ -362,7 +330,7 @@ public class KaApprenticesNewController {
 			return JSONResponseBody.ERROR_CODE_500;
 		}
 	}
-
+	**/
 	
 	/**
 	 * 收徒奖励
@@ -371,7 +339,7 @@ public class KaApprenticesNewController {
 	 * @param page
 	 * @return
 	 */
-	@ResponseBody
+	/** @ResponseBody
 	@RequestMapping(value = "apprenticesreward", method = RequestMethod.POST, produces = "application/json;charset=utf-8")
 	public String apprenticesReward(@RequestParam(value = "parent1") Long parent1,
 			@RequestParam(value = "startNum" , defaultValue = "1") Integer page) {
@@ -418,7 +386,7 @@ public class KaApprenticesNewController {
 			return JSONResponseBody.ERROR_CODE_500;
 		}
 	}
-	
+	**/
 	
 
 	/**
@@ -429,7 +397,7 @@ public class KaApprenticesNewController {
 	 * @param page
 	 * @return
 	 */
-	@ResponseBody
+	/** @ResponseBody
 	@RequestMapping(value = "apprenticescontribu", method = RequestMethod.POST, produces = "application/json;charset=utf-8")
 	public String apprenticesContribu(@RequestParam(value = "u") Long parent1,
 			@RequestParam(value = "t" , defaultValue = "1") Integer type,
@@ -473,6 +441,7 @@ public class KaApprenticesNewController {
 		}
 	}
 
+	**/
 	
 	/**
 	 * 用户每次进来刷新过期的时间差

@@ -1,4 +1,4 @@
-# :cn: `Spring Boot 多modules工程实战开发` :cn: <br>
+# :hourglass: `Spring Boot 多modules工程实战开发` :hourglass_flowing_sand: <br>
 
 ### 1 : * `SpringBoot` 多模块工程配置清单 <br>
   * `dao` 项目为基类，主要是配置`数据库连接池、mybatis xml、log、redis、MQ`等相关。<br>
